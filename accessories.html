@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESSORIES - The Closet Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="back-btn">← BACK</a>
+            <h1 class="page-title">ACCESSORIES</h1>
+            <div></div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="carousel-container">
+            <div class="scroll-indicator">SCROLL →</div>
+            <div class="carousel">
+                <!-- Accessory items -->
+                <div class="item-slot" data-name="CHOPPER PLUSH" data-lat="37.3382" data-lng="-121.8863">
+                    <div class="item-image">
+                        <img src="Assets/AccessoriesPNG/ChopperPlush.png" alt="Chopper Plush" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">CHOPPER PLUSH</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-1"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="JAPAN NECKLACE" data-lat="35.0116" data-lng="135.7681">
+                    <div class="item-image">
+                        <img src="Assets/AccessoriesPNG/JapanNecklace.png" alt="Japan Necklace" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">JAPAN NECKLACE</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-2"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="JAPAN RING" data-lat="35.6762" data-lng="139.6503">
+                    <div class="item-image">
+                        <img src="Assets/AccessoriesPNG/JapanRing.png" alt="Japan Ring" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">JAPAN RING</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-3"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="NINTENDO 3DS" data-lat="37.4323" data-lng="-121.8996">
+                    <div class="item-image">
+                        <img src="Assets/AccessoriesPNG/Nintendo3DS.png" alt="Nintendo 3DS" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">NINTENDO 3DS</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-4"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="PHILIPPINES BRACELET" data-lat="14.6760" data-lng="121.0437">
+                    <div class="item-image">
+                        <img src="Assets/AccessoriesPNG/PhilippinesBracelet.png" alt="Philippines Bracelet" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">PHILIPPINES BRACELET</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-5"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="SILVER WATCH" data-lat="37.4323" data-lng="-121.8996">
+                    <div class="item-image">
+                        <img src="Assets/AccessoriesPNG/SilverWatch.png" alt="Silver Watch" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">SILVER WATCH</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-6"></svg>
+                    </div>
+                </div>
+
+                <!-- Add new item slot -->
+                <div class="add-item">
+                    <div class="add-icon">+</div>
+                    <div class="add-text">ADD NEW ACCESSORY</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Map Modal -->
+    <div class="map-modal" id="map-modal" aria-hidden="true">
+        <div class="map-content">
+            <div class="map-close" id="map-close">CLOSE ✕</div>
+            <svg id="map-svg" width="100%" height="100%"></svg>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
