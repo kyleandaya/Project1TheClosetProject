@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOES - The Closet Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="back-btn">← BACK</a>
+            <h1 class="page-title">SHOES</h1>
+            <div></div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="carousel-container">
+            <div class="scroll-indicator">SCROLL →</div>
+            <div class="carousel">
+                <!-- Shoe items -->
+                <div class="item-slot" data-name="ASICS" data-lat="34.0522" data-lng="-118.2437">
+                    <div class="item-image">
+                        <img src="Assets/ShoesPNG/Asics.png" alt="Asics" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">ASICS</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-1"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="GOTHIC DOCS" data-lat="37.7749" data-lng="-122.4194">
+                    <div class="item-image">
+                        <img src="Assets/ShoesPNG/GothicDocs.png" alt="Gothic Docs" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">GOTHIC DOCS</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-2"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="HIKING BOOTS" data-lat="37.4323" data-lng="-121.8996">
+                    <div class="item-image">
+                        <img src="Assets/ShoesPNG/HikingBoots.png" alt="Hiking Boots" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">HIKING BOOTS</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-3"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="JORDANS 4" data-lat="43.6532" data-lng="-79.3832">
+                    <div class="item-image">
+                        <img src="Assets/ShoesPNG/Jordans4.png" alt="Jordans 4" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">JORDANS 4</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-4"></svg>
+                    </div>
+                </div>
+
+                <div class="item-slot" data-name="LOAFER DOCS" data-lat="34.0522" data-lng="-118.2437">
+                    <div class="item-image">
+                        <img src="Assets/ShoesPNG/LoaferDocs.png" alt="Loafer Docs" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="item-info">
+                        <div class="item-name">LOAFER DOCS</div>
+                    </div>
+                    <div class="hexbin-container">
+                        <svg class="hexbin-svg" id="hexbin-5"></svg>
+                    </div>
+                </div>
+
+                <!-- Add new item slot -->
+                <div class="add-item">
+                    <div class="add-icon">+</div>
+                    <div class="add-text">ADD NEW SHOE</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Map Modal -->
+    <div class="map-modal" id="map-modal" aria-hidden="true">
+        <div class="map-content">
+            <div class="map-close" id="map-close">CLOSE ✕</div>
+            <svg id="map-svg" width="100%" height="100%"></svg>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
